@@ -3,13 +3,10 @@
     <thead>
     <tr>
       <th class="text-left">
-        Дата
+        Идентификатор
       </th>
       <th class="text-left">
-        Время
-      </th>
-      <th class="text-left">
-        Количество вакансий
+        Наименование
       </th>
     </tr>
     </thead>
@@ -18,9 +15,8 @@
         v-for="item in items"
         :key="item.id"
     >
-      <td>{{ item.date }}</td>
-      <td>{{ item.time }}</td>
-      <td>{{ item.count }}</td>
+      <td>{{ item.id }}</td>
+      <td>{{ item.name }}</td>
     </tr>
     </tbody>
   </v-table>
@@ -28,16 +24,16 @@
 
 <script>
 export default {
-  name: "HhStatistics",
+  name: "HhExperience",
   data () {
     return {
       items: [],
     }
   },
   mounted() {
-    fetch('http://smart4it.ru:8080/info?sort=date,desc&size=100')
+    fetch('http://smart4it.ru:8080/dictionary/experience')
     .then(response => response.json())
-    .then(json => { this.items = json.content })
+    .then(json => { this.items = json })
   }
 }
 
