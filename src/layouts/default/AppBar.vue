@@ -9,6 +9,7 @@
         </v-app-bar-title>
       </v-col>
       <v-col>
+        <v-btn to="/blog">Блог</v-btn>
         <v-btn to="/">Статистика</v-btn>
         <v-btn to="/dictionary/experience">Справочники</v-btn>
       </v-col>
