@@ -1,5 +1,6 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
+import Smart4ITBlogElement from "@/components/Smart4ITBlogElement.vue";
 
 const routes = [
   {
@@ -40,6 +41,17 @@ const routes = [
         component: () => import(/* webpackChunkName: "home" */ '@/components/Smart4ITBlog.vue'),
       },
     ],
+  },
+  {
+    path: '/blog/:id',
+    component: () => import('@/layouts/default/Default.vue'),
+    children: [
+      {
+        path: '/blog/:id',
+        name: 'Smart4ITBlogElement',
+        component: () => import(/* webpackChunkName: "home" */ '@/components/Smart4ITBlogElement.vue'),
+      },
+    ]
   },
 ]
 
