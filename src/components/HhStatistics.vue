@@ -1,4 +1,10 @@
 <template>
+
+  <div class="righted" style="text-align: right">
+    <iframe src="http://213.226.125.39:3000/d-solo/d3dc323f-575c-4130-a158-c8f83150d196/kolichestvo-vakansij-java?orgId=1&from=1675609200000&to=1688733793315&theme=light&panelId=1" width="450" height="200" frameborder="1"></iframe>
+  </div>
+
+
   <v-table density="compact">
     <thead>
     <tr>
@@ -21,9 +27,11 @@
       <td>{{ item.date }}</td>
       <td>{{ item.time }}</td>
       <td>{{ item.count }}</td>
+
     </tr>
     </tbody>
   </v-table>
+
 </template>
 
 <script>
